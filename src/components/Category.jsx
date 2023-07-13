@@ -1,5 +1,6 @@
 import React from "react";
 import { categories } from "../data/data.js";
+import Image from "next/image";
 
 function Category() {
   return (
@@ -15,7 +16,13 @@ function Category() {
             className=" bg-gray-100 rounded-lg p-4 flex justify-between items-center "
           >
             <h2 className=" font-bold sm:text-xl "> {item.name} </h2>
-            <img className=" w-20 " src={item.image} alt={item.name} />
+            <Image
+              className=" w-20 "
+              src={item.image}
+              width={500}
+              height={500}
+              alt={item.name}
+            />
           </div>
         ))}
       </div>

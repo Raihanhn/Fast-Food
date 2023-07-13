@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { data } from "../data/data.js";
+import Image from "next/image";
 
 function Food() {
   const [foods, setFoods] = useState(data);
@@ -104,8 +105,10 @@ function Food() {
             key={index}
             className=" border shadow-lg rounded-lg hover:scale-105 duration-300 "
           >
-            <img
+            <Image
               src={item.image}
+              width={500}
+              height={500}
               alt={item.name}
               className=" w-full h-[200px] object-cover rounded-t-lg "
             />
@@ -113,8 +116,7 @@ function Food() {
               <p className=" font-bold "> {item.name} </p>
               <p>
                 <span className=" bg-orange-500 text-white p-1 rounded-full ">
-                  {" "}
-                  {item.price}{" "}
+                  {item.price}
                 </span>
               </p>
             </div>
